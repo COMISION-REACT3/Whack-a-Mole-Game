@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 2rem; /* Texto adaptable */
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Paytone One", sans-serif;
+  background-color: #769c38;
+}
+
+.count {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.5rem; /* Texto adaptable */
+}
+
+.btn-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Espacio entre botones */
+}
+
+#start-game,
+#restart-game {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Paytone One", sans-serif;
+  background-color: #066924;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+#start-game:hover,
+#restart-game:hover {
+  background-color: #74d691;
+  color: #0d5322;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.item {
+  width: 100%; /* Ajusta el ancho para que se adapte al contenedor */
+  aspect-ratio: 5 / 6; /* Mantiene la proporción */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mole {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #d5d6db;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+
+.mole img {
+  padding: 7px;
+}
+
+.mole-hide {
+  bottom: 10px;
+  width: 50px;
+}
+
+.mole-appear {
+  width: 120px;
+  bottom: 40px;
+}
+
+.bush {
+  width: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.whack-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+  }
+
+  .count {
+    font-size: 1.2rem; /* Reduce el tamaño del contador */
+  }
+
+  #start-game,
+  #restart-game {
+    font-size: 0.9rem; /* Reduce el tamaño de los botones */
+    padding: 6px 12px; /* Ajusta el relleno de los botones */
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* Ajusta a 2 columnas */
+    gap: 15px;
+  }
+
+  .item {
+    aspect-ratio: 4 / 5; /* Ajusta la proporción */
+  }
+
+  .mole-hide {
+    width: 40px;
+  }
+
+  .mole-appear {
+    width: 100px;
+  }
+
+  .bush {
+    width: 100px;
+  }
+
+  .whack-text {
+    font-size: 18px; /* Ajusta el tamaño del texto "whack!" */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Reduce aún más el tamaño del título */
+  }
+
+  .count {
+    font-size: 1rem; /* Reduce el tamaño del contador */
+  }
+
+  #start-game,
+  #restart-game {
+    font-size: 0.8rem; /* Reduce el tamaño de los botones */
+    padding: 5px 10px;
+  }
+
+  .container {
+   
+    gap: 10px;
+  }
+
+  .item {
+    aspect-ratio: 3 / 4;
+  }
+
+  .mole-hide {
+    width: 30px;
+  }
+
+  .mole-appear {
+    width: 80px;
+  }
+
+  .bush {
+    width: 80px;
+  }
+
+  .whack-text {
+    font-size: 16px; /* Ajusta el tamaño del texto "whack!" */
+  }
+}
