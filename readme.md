@@ -21,7 +21,6 @@ Pon a prueba tus reflejos golpeando a los topos que aparecen aleatoriamente ante
 
 ---
 
-
 ---
 
 ## ⚡ Cómo jugar
